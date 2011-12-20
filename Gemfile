@@ -14,6 +14,8 @@ gem 'fastercsv' # Only required on Ruby 1.8 and below
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'cancan'
 gem 'highline'
+gem 'acts-as-taggable-on', '~>2.2.0'
+gem 'metropoli', :git => 'git://github.com/innku/metropoli.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -53,4 +55,5 @@ group :test, :development do
 	gem 'machinist', '>= 2.0.0.beta2'
   gem 'faker'
   gem 'minitest'
+  gem 'chronic'
 end

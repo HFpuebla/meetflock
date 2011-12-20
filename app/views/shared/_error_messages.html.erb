@@ -1,0 +1,10 @@
+<% if target.errors.any? %>
+<div id="errorExplanation">
+  <p><%= t(:header, :scope => 'activerecord.errors.template', :count => target.errors.count, :model => target.class.model_name.human.capitalize) %></p>
+  <ol>
+  <% target.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ol>
+</div>
+<% end %>

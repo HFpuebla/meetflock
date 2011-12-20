@@ -1,3 +1,7 @@
+Given /^$/ do
+  
+end
+
 Given /^no user exists with an email of "(.*)"$/ do |email|
   User.find(:first, :conditions => { :email => email }).should be_nil
 end

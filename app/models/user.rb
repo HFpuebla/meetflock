@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   
+  acts_as_taggable
+  acts_as_taggable_on :skills
+  metropoli_for   :city
+  
   has_and_belongs_to_many :roles
   
   def role?(role)
