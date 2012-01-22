@@ -1,0 +1,43 @@
+<%= form_for(@profile, :url => edit_profile_path, :html => { :multipart => true }, :method => :post) do |f| %>
+	
+	<%= render "shared/error_messages", :target => @profile %>
+	<div class='field'>
+		<%= f.label :avatar %>
+		<%= f.file_field :avatar %>
+	</div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :motto %><br />
+    <%= f.text_area :motto %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
+  </div>
+	<div class="field">
+		<%= f.label :city_name %>
+		<%= f.text_field :city_name, :class => "city_autocomplete" %>
+	</div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= select('profile', 'status', Profile::STATUS.collect { |k, v| [t("#{k.to_s}"), v] }) %>
+  </div>
+	<div class="field">
+		<%= f.label :position %>
+		<%= select("profile", "position_id", Position.all_cached.collect {|p| [ p.name, p.id ] }) %>
+	</div>
+	<div class="field">
+		<%= f.label :skill_list %>
+		<%= f.text_field :skill_list, :tags => '' %>
+	</div>
+  <div class="field">
+    <%= f.label :receive_newsletter %><br />
+    <%= f.check_box :receive_newsletter %>
+  </div>
+  <div class="actions">
+    <%= f.submit t('helpers.submit.publish', :model => 'perfil'), :disable_with => t('helpers.please_wait')  %>
+  </div>
+<% end %>

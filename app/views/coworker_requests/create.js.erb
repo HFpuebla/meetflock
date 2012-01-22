@@ -1,0 +1,6 @@
+<% unless @coworker_request.errors.any? %>
+	$('#form').html("<%= escape_javascript(render 'form', :coworker_request => CoworkerRequest.new) %>");
+	$('.looking-for').prepend("<%= escape_javascript(render 'coworker_request', :coworker_request => @coworker_request) %>").hide().fadeIn('slow');
+<% else %>
+  $('#form').html("<%= escape_javascript(render 'form', :coworker_request => @coworker_request) %>");
+<% end %>

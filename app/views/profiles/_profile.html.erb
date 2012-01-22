@@ -1,0 +1,13 @@
+<li>
+	<div class="card-inner">
+		<div class="profile-info">
+			 <div class="profile"><%= profile.avatar? ? image_tag(profile.avatar.url :small) : image_tag('holders/avatar.jpg') %><%= link_to '', profile %></div>
+			<h3><%= profile.name %></h3>
+			<span class="location"><%= profile.city_name %></span>
+		</div>
+		<div class="skills">
+			<h6>Skills:</h6>
+			<p><%= profile.skill_list %></p>
+		</div>
+	</div>
+</li>

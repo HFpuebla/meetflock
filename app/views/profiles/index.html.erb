@@ -1,0 +1,9 @@
+<%= render 'search_by_position' %>
+
+<ul class='cards' id='cards'>
+	<%= render @profiles %>
+</ul>
+
+<%= content_for :extra_scripts do %>
+	<%= javascript_include_tag 'profiles' %>
+<% end %>

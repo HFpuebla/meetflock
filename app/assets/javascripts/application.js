@@ -4,6 +4,10 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//= require jquery
+//= require jquery.min
+//= require jquery-ui.min
 //= require jquery_ujs
 //= require_tree .
+//= require jquery.tagsinput.min
+//= require metropoli.jquery.ui
+//= require jquery.sausage

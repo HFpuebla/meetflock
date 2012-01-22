@@ -1,0 +1,12 @@
+es:
+  activerecord:
+    models:
+      profile: "Perfil"
+    attributes:
+      name: "Nombre"
+      motto: "Motto"
+      website: "Sitio Web"
+      status: "Estado"
+      receive_newsletter: "Recibir Newsletter"
+      published: "Publicado"
+      city: "Ciudad"

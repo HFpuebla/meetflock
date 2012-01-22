@@ -1,0 +1,7 @@
+<li id="<%= "coworker_request_#{coworker_request.id}" %>">
+	<div class="details">
+		<h4 class="position"><%= coworker_request.position.name %></h4>
+		<p class="skills"><%= coworker_request.skill_list %></p>
+		<p><%= link_to 'Remove', coworker_request, :confirm => 'Are you sure?', :method => :delete, :remote => true %></p>
+	</div>
+</li>

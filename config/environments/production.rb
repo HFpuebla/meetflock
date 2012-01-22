@@ -57,4 +57,7 @@ Antgrape::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  # Configuration dalli client cache for heroku
+  config.cache_store = :dalli_store
 end

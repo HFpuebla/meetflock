@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <b>Motto:</b>
+  <%= @profile.motto %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @profile.website %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @profile.status %>
+</p>
+
+<p>
+  <b>Receive newsletter:</b>
+  <%= @profile.receive_newsletter %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @profile.city_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_profile_path %>

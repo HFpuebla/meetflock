@@ -1,0 +1,14 @@
+<%= form_for(coworker_request, :url => coworker_requests_path, :remote => true) do |f| %>
+	<%= render "shared/error_messages", :target => @coworker_request %>
+  <div class="field">
+    <%= f.label :position %><br />
+    <%= select('coworker_request', 'position_id', Position.all_cached.collect	{ |p| [p.name, p.id] }) %>
+  </div>
+	<div class="field">
+		<%= f.label :skill_list %>
+		<%= f.text_field :skill_list, :tags => '' %>
+	</div>
+  <div class="actions">
+    <%= f.submit "Add Position", :disable_with => "Wait Please" %>
+  </div>
+<% end %>

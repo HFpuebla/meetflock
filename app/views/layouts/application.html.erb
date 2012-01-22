@@ -3,6 +3,7 @@
 <head>
   <title>Antgrape</title>
   <%= stylesheet_link_tag    "application" %>
+	<%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/start/jquery-ui.css" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -11,4 +12,5 @@
 <%= yield %>
 
 </body>
+<%= yield :extra_scripts %>
 </html>

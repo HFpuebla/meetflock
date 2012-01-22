@@ -1,12 +1,24 @@
 Antgrape::Application.routes.draw do
+  mailboxes_for :users
+  
+  resources :coworker_requests
+  resources :fellowships
+  
+  match 'looking-for' => 'coworker_requests#index', :as => "looking_for" 
+
+  match 'profile' => 'profiles#profile', :as => "profile"
+  match 'edit-profile' => 'profiles#edit_profile', :as => "edit_profile"
+  match '/' => 'profiles#index', :as => "profiles"
+
+  metropoli_for :cities, :states, :countries
+
   # Override devise default routes for login, logout and signup
   devise_for :users do
     get '/login'   => "devise/sessions#new",       :as => :new_user_session
     post '/login'  => 'devise/sessions#create',    :as => :user_session
     get '/logout'  => 'devise/sessions#destroy',   :as => :destroy_user_session
-    get "/signup"   => "users/registrations#new",   :as => :new_user_registration
+    get "/signup"   => "devise/registrations#new",   :as => :new_user_registration
   end
-  
   
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
@@ -59,7 +71,7 @@ Antgrape::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  root :to => 'profiles#index'
 
   # See how all your routes lay out with "rake routes"
 

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @coworker_request.quantity %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @coworker_request.position %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @coworker_request.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_coworker_request_path(@coworker_request) %> |
+<%= link_to 'Back', coworker_requests_path %>
