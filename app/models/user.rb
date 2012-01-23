@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :roles
   has_many :coworker_requests
   has_many :fellowships
-  has_many :coworkers, :through => :fellowships 
+  has_many :coworkers, :through => :fellowships, :foreign_key => "invited_id"
   
   # Validations
   validates :username, :uniqueness => true

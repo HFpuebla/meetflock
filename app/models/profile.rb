@@ -1,6 +1,6 @@
 class Profile < ActiveRecord::Base
   # Constants
-  STATUS = {:available => 0, :not_available => 1}
+  STATUS = ["available_to_work", "not_available_to_work"]
   
   # Gem Configs
   acts_as_taggable

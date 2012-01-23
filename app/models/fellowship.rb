@@ -1,9 +1,12 @@
 class Fellowship < ActiveRecord::Base
-  STATUS = {:not_working => 0, :working => 1, :pending => 3, :rejected => 4}
+  STATUS = {:pending => "pending", 
+            :working => "working", 
+            :rejected => "rejected", 
+            :worked => "worked"}
   
   # Associations
-  belongs_to :user
-  belongs_to :coworker, :class_name => 'User'
+  belongs_to :inviter, :class_name => "User"
+  belongs_to :invited, :class_name => "User"
 end
 
 # == Schema Information

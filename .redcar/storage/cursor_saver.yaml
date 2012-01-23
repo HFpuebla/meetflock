@@ -1,0 +1,57 @@
+--- 
+cursor_positions: 
+  - :path: app/views/home/index.html.erb
+    :cursor_offset: 12
+    :timestamp: 2012-01-21 18:13:35 -06:00
+  - :path: app/assets/javascripts/coworker_requests.js.coffee
+    :cursor_offset: 229
+    :timestamp: 2012-01-21 18:47:19 -06:00
+  - :path: app/assets/javascripts/coworkers.js.coffee
+    :cursor_offset: 229
+    :timestamp: 2012-01-21 18:47:19 -06:00
+  - :path: app/assets/javascripts/home.js.coffee
+    :cursor_offset: 229
+    :timestamp: 2012-01-21 18:47:14 -06:00
+  - :path: config/routes.rb
+    :cursor_offset: 378
+    :timestamp: 2012-01-21 18:49:49 -06:00
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 320
+    :timestamp: 2012-01-21 18:47:19 -06:00
+  - :path: Gemfile
+    :cursor_offset: 927
+    :timestamp: 2012-01-21 18:47:19 -06:00
+  - :path: config/database.yml
+    :cursor_offset: 361
+    :timestamp: 2012-01-21 18:23:52 -06:00
+    :selection_offset: 354
+    :block_selection_mode: false
+  - :path: app/views/profiles/_search_by_position.html.erb
+    :cursor_offset: 256
+    :timestamp: 2012-01-21 19:12:07 -06:00
+  - :path: db/sample/users.rb
+    :cursor_offset: 0
+    :timestamp: 2012-01-21 18:03:01 -06:00
+  - :path: app/models/position.rb
+    :cursor_offset: 56
+    :timestamp: 2012-01-21 20:20:12 -06:00
+  - :path: app/models/fellowship.rb
+    :cursor_offset: 70
+    :timestamp: 2012-01-21 21:41:38 -06:00
+    :selection_offset: 63
+    :block_selection_mode: false
+  - :path: app/models/role.rb
+    :cursor_offset: 0
+    :timestamp: 2012-01-21 18:47:19 -06:00
+  - :path: app/models/profile.rb
+    :cursor_offset: 258
+    :timestamp: 2012-01-21 20:45:39 -06:00
+  - :path: app/models/coworker_request.rb
+    :cursor_offset: 286
+    :timestamp: 2012-01-21 20:58:40 -06:00
+    :selection_offset: 283
+    :block_selection_mode: false
+  - :path: app/models/user.rb
+    :cursor_offset: 352
+    :timestamp: 2012-01-21 21:47:11 -06:00
+files_to_retain: 0
