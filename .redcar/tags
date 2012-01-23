@@ -1,4 +1,4 @@
-1327204031
+1327350203
 (?:|I )attach the file "([^"]*)" to "([^"]*)"(?: within "([^"]*)")?	/home/nou/rails_projects/antgrape/features/step_definitions/web_steps.rb	When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"(?: within "([^"]*)")?$/ do
 (?:|I )check "([^"]*)"	/home/nou/rails_projects/antgrape/features/step_definitions/web_steps.rb	When /^(?:|I )check "([^"]*)"$/ do
 (?:|I )choose "([^"]*)"	/home/nou/rails_projects/antgrape/features/step_definitions/web_steps.rb	When /^(?:|I )choose "([^"]*)"$/ do
@@ -83,7 +83,7 @@ Profiles	/home/nou/rails_projects/antgrape/spec/requests/profiles_spec.rb	descri
 ProfilesController	/home/nou/rails_projects/antgrape/app/controllers/profiles_controller.rb	class ProfilesController 
 Role	/home/nou/rails_projects/antgrape/app/models/role.rb	class Role 
 STATUS	/home/nou/rails_projects/antgrape/app/models/profile.rb	  STATUS =
-STATUS	/home/nou/rails_projects/antgrape/app/models/fellowship.rb	  STATUS =
+STATUSES	/home/nou/rails_projects/antgrape/app/models/fellowship.rb	  STATUSES =
 TestCase	/home/nou/rails_projects/antgrape/test/test_helper.rb	class ActiveSupport::TestCase
 User	/home/nou/rails_projects/antgrape/app/models/user.rb	class User 
 User create profile	/home/nou/rails_projects/antgrape/features/user_create_profile.feature	Feature: User create profile
@@ -91,9 +91,9 @@ UsersController	/home/nou/rails_projects/antgrape/app/controllers/users_controll
 UsersHaveAndBelongsToManyRoles	/home/nou/rails_projects/antgrape/db/migrate/20111207223714_users_have_and_belongs_to_many_roles.rb	class UsersHaveAndBelongsToManyRoles 
 Visitor can see list of entrepreneurs	/home/nou/rails_projects/antgrape/features/visitor_can_see_list_of_entrepreneurs.feature	Feature: Visitor can see list of entrepreneurs
 WithinHelpers	/home/nou/rails_projects/antgrape/features/step_definitions/web_steps.rb	module WithinHelpers
-all_cached	/home/nou/rails_projects/antgrape/app/models/role.rb	  def self.all_cached
 all_cached	/home/nou/rails_projects/antgrape/app/models/position.rb	  def self.all_cached
 all_cached	/home/nou/rails_projects/antgrape/app/models/profile.rb	  def self.all_cached
+all_cached	/home/nou/rails_projects/antgrape/app/models/role.rb	  def self.all_cached
 assigns a new coworker_request as @coworker_request	/home/nou/rails_projects/antgrape/spec/controllers/coworker_requests_controller_spec.rb	it "assigns a new coworker_request as @coworker_request" do
 assigns a new profile as @profile	/home/nou/rails_projects/antgrape/spec/controllers/profiles_controller_spec.rb	it "assigns a new profile as @profile" do
 assigns a newly created but unsaved coworker_request as @coworker_request	/home/nou/rails_projects/antgrape/spec/controllers/coworker_requests_controller_spec.rb	it "assigns a newly created but unsaved coworker_request as @coworker_request" do
@@ -112,22 +112,22 @@ assigns the requested profile as @profile	/home/nou/rails_projects/antgrape/spec
 assigns the requested profile as @profile	/home/nou/rails_projects/antgrape/spec/controllers/profiles_controller_spec.rb	it "assigns the requested profile as @profile" do
 change	/home/nou/rails_projects/antgrape/db/migrate/20111207183812_devise_create_users.rb	  def change
 change	/home/nou/rails_projects/antgrape/db/migrate/20111207223439_create_roles.rb	  def change
-change	/home/nou/rails_projects/antgrape/db/migrate/20120118065109_add_username_to_users.rb	  def change
 change	/home/nou/rails_projects/antgrape/db/migrate/20111210194430_add_extra_columns_to_user.rb	  def change
-change	/home/nou/rails_projects/antgrape/db/migrate/20120117180256_create_fellowships.rb	  def change
-change	/home/nou/rails_projects/antgrape/db/migrate/20120105232233_create_positions.rb	  def change
 change	/home/nou/rails_projects/antgrape/db/migrate/20120103174838_create_profiles.rb	  def change
+change	/home/nou/rails_projects/antgrape/db/migrate/20120105232233_create_positions.rb	  def change
 change	/home/nou/rails_projects/antgrape/db/migrate/20120106175256_create_coworker_requests.rb	  def change
-concats two strings with spaces	/home/nou/rails_projects/antgrape/spec/helpers/home_helper_spec.rb	it "concats two strings with spaces" do
+change	/home/nou/rails_projects/antgrape/db/migrate/20120117180256_create_fellowships.rb	  def change
+change	/home/nou/rails_projects/antgrape/db/migrate/20120118065109_add_username_to_users.rb	  def change
 concats two strings with spaces	/home/nou/rails_projects/antgrape/spec/helpers/coworker_requests_helper_spec.rb	it "concats two strings with spaces" do
 concats two strings with spaces	/home/nou/rails_projects/antgrape/spec/helpers/coworkers_helper_spec.rb	it "concats two strings with spaces" do
+concats two strings with spaces	/home/nou/rails_projects/antgrape/spec/helpers/home_helper_spec.rb	it "concats two strings with spaces" do
 concats two strings with spaces	/home/nou/rails_projects/antgrape/spec/helpers/profiles_helper_spec.rb	it "concats two strings with spaces" do
 coworker_requests/edit.html.erb	/home/nou/rails_projects/antgrape/spec/views/coworker_requests/edit.html.erb_spec.rb	describe "coworker_requests/edit.html.erb" do
 coworker_requests/index.html.erb	/home/nou/rails_projects/antgrape/spec/views/coworker_requests/index.html.erb_spec.rb	describe "coworker_requests/index.html.erb" do
 coworker_requests/new.html.erb	/home/nou/rails_projects/antgrape/spec/views/coworker_requests/new.html.erb_spec.rb	describe "coworker_requests/new.html.erb" do
 coworker_requests/show.html.erb	/home/nou/rails_projects/antgrape/spec/views/coworker_requests/show.html.erb_spec.rb	describe "coworker_requests/show.html.erb" do
-create	/home/nou/rails_projects/antgrape/app/controllers/fellowships_controller.rb	  def create
 create	/home/nou/rails_projects/antgrape/app/controllers/coworker_requests_controller.rb	  def create
+create	/home/nou/rails_projects/antgrape/app/controllers/fellowships_controller.rb	  def create
 create_admin_user	/home/nou/rails_projects/antgrape/db/sample/users.rb	def create_admin_user
 create_fixtures	/home/nou/rails_projects/antgrape/lib/custom_fixtures.rb	  def self.create_fixtures(fixtures_directory, table_names, class_names = {})
 creates a new CoworkerRequest	/home/nou/rails_projects/antgrape/spec/controllers/coworker_requests_controller_spec.rb	it "creates a new CoworkerRequest" do
@@ -140,27 +140,27 @@ displaying all the basic info in each entrepreneurs card	/home/nou/rails_project
 do_search	/home/nou/rails_projects/antgrape/public/javascripts/jquery.tokeninput.js	function do_search()
 down	/home/nou/rails_projects/antgrape/db/migrate/20111207183813_create_rails_admin_histories_table.rb	  def self.down
 down	/home/nou/rails_projects/antgrape/db/migrate/20111207223714_users_have_and_belongs_to_many_roles.rb	  def down
-down	/home/nou/rails_projects/antgrape/db/migrate/20111220174104_add_city_to_users.rb	  def self.down
-down	/home/nou/rails_projects/antgrape/db/migrate/20120104214302_add_city_to_profiles.rb	  def self.down
-down	/home/nou/rails_projects/antgrape/db/migrate/20120102220755_create_metropoli_states.rb	  def self.down
-down	/home/nou/rails_projects/antgrape/db/migrate/20120117062418_create_messages_table.rb	  def self.down
-down	/home/nou/rails_projects/antgrape/db/migrate/20120106174702_add_avatar_to_profile.rb	  def self.down
-down	/home/nou/rails_projects/antgrape/db/migrate/20120102220754_create_metropoli_countries.rb	  def self.down
-down	/home/nou/rails_projects/antgrape/db/migrate/20120117062419_create_message_copies_table.rb	  def self.down
 down	/home/nou/rails_projects/antgrape/db/migrate/20111219164231_acts_as_taggable_on_migration.rb	  def self.down
+down	/home/nou/rails_projects/antgrape/db/migrate/20111220174104_add_city_to_users.rb	  def self.down
+down	/home/nou/rails_projects/antgrape/db/migrate/20120102220754_create_metropoli_countries.rb	  def self.down
+down	/home/nou/rails_projects/antgrape/db/migrate/20120102220755_create_metropoli_states.rb	  def self.down
 down	/home/nou/rails_projects/antgrape/db/migrate/20120102220756_create_metropoli_cities.rb	  def self.down
+down	/home/nou/rails_projects/antgrape/db/migrate/20120104214302_add_city_to_profiles.rb	  def self.down
+down	/home/nou/rails_projects/antgrape/db/migrate/20120106174702_add_avatar_to_profile.rb	  def self.down
+down	/home/nou/rails_projects/antgrape/db/migrate/20120117062418_create_messages_table.rb	  def self.down
+down	/home/nou/rails_projects/antgrape/db/migrate/20120117062419_create_message_copies_table.rb	  def self.down
 edit	/home/nou/rails_projects/antgrape/app/controllers/coworker_requests_controller.rb	  def edit
 edit_profile	/home/nou/rails_projects/antgrape/app/controllers/profiles_controller.rb	  def edit_profile
-expire_position_all_cache	/home/nou/rails_projects/antgrape/app/models/role.rb	  def expire_position_all_cache
 expire_position_all_cache	/home/nou/rails_projects/antgrape/app/models/position.rb	  def expire_position_all_cache
+expire_position_all_cache	/home/nou/rails_projects/antgrape/app/models/role.rb	  def expire_position_all_cache
 expire_profile_all_cache	/home/nou/rails_projects/antgrape/app/models/profile.rb	  def expire_profile_all_cache
 fellowship_status_url	/home/nou/rails_projects/antgrape/app/helpers/fellowships_helper.rb	  def fellowship_status_url(user)
-find_model	/home/nou/rails_projects/antgrape/app/helpers/application_helper.rb	  def find_model
 find_model	/home/nou/rails_projects/antgrape/app/controllers/users_controller.rb	  def find_model
+find_model	/home/nou/rails_projects/antgrape/app/helpers/application_helper.rb	  def find_model
 highlight_term	/home/nou/rails_projects/antgrape/public/javascripts/jquery.tokeninput.js	function highlight_term(value, term)
-index	/home/nou/rails_projects/antgrape/app/controllers/profiles_controller.rb	  def index
-index	/home/nou/rails_projects/antgrape/app/controllers/home_controller.rb	  def index
 index	/home/nou/rails_projects/antgrape/app/controllers/coworker_requests_controller.rb	  def index
+index	/home/nou/rails_projects/antgrape/app/controllers/home_controller.rb	  def index
+index	/home/nou/rails_projects/antgrape/app/controllers/profiles_controller.rb	  def index
 initialize	/home/nou/rails_projects/antgrape/app/models/ability.rb	  def initialize(user)
 insert_token	/home/nou/rails_projects/antgrape/public/javascripts/jquery.tokeninput.js	function insert_token(id, value)
 is_printable_character	/home/nou/rails_projects/antgrape/public/javascripts/jquery.tokeninput.js	function is_printable_character(keycode)
@@ -189,8 +189,8 @@ redirects to the profile	/home/nou/rails_projects/antgrape/spec/controllers/prof
 redirects to the profiles list	/home/nou/rails_projects/antgrape/spec/controllers/profiles_controller_spec.rb	it "redirects to the profiles list" do
 renders a list of coworker_requests	/home/nou/rails_projects/antgrape/spec/views/coworker_requests/index.html.erb_spec.rb	it "renders a list of coworker_requests" do
 renders a list of profiles	/home/nou/rails_projects/antgrape/spec/views/profiles/index.html.erb_spec.rb	it "renders a list of profiles" do
-renders attributes in <p>	/home/nou/rails_projects/antgrape/spec/views/profiles/show.html.erb_spec.rb	it "renders attributes in <p>" do
 renders attributes in <p>	/home/nou/rails_projects/antgrape/spec/views/coworker_requests/show.html.erb_spec.rb	it "renders attributes in <p>" do
+renders attributes in <p>	/home/nou/rails_projects/antgrape/spec/views/profiles/show.html.erb_spec.rb	it "renders attributes in <p>" do
 renders new coworker_request form	/home/nou/rails_projects/antgrape/spec/views/coworker_requests/new.html.erb_spec.rb	it "renders new coworker_request form" do
 renders new profile form	/home/nou/rails_projects/antgrape/spec/views/profiles/new.html.erb_spec.rb	it "renders new profile form" do
 renders the edit coworker_request form	/home/nou/rails_projects/antgrape/spec/views/coworker_requests/edit.html.erb_spec.rb	it "renders the edit coworker_request form" do
@@ -214,13 +214,13 @@ routes to #update	/home/nou/rails_projects/antgrape/spec/routing/profiles_routin
 routing	/home/nou/rails_projects/antgrape/spec/routing/coworker_requests_routing_spec.rb	describe "routing" do
 routing	/home/nou/rails_projects/antgrape/spec/routing/profiles_routing_spec.rb	describe "routing" do
 run_search	/home/nou/rails_projects/antgrape/public/javascripts/jquery.tokeninput.js	function run_search(query)
-show	/home/nou/rails_projects/antgrape/app/controllers/profiles_controller.rb	  def show
 show	/home/nou/rails_projects/antgrape/app/controllers/coworker_requests_controller.rb	  def show
+show	/home/nou/rails_projects/antgrape/app/controllers/profiles_controller.rb	  def show
 show me the page	/home/nou/rails_projects/antgrape/features/step_definitions/web_steps.rb	Then /^show me the page$/ do
 show_dropdown	/home/nou/rails_projects/antgrape/public/javascripts/jquery.tokeninput.js	function show_dropdown()
-string concat	/home/nou/rails_projects/antgrape/spec/helpers/home_helper_spec.rb	describe "string concat" do
 string concat	/home/nou/rails_projects/antgrape/spec/helpers/coworker_requests_helper_spec.rb	describe "string concat" do
 string concat	/home/nou/rails_projects/antgrape/spec/helpers/coworkers_helper_spec.rb	describe "string concat" do
+string concat	/home/nou/rails_projects/antgrape/spec/helpers/home_helper_spec.rb	describe "string concat" do
 string concat	/home/nou/rails_projects/antgrape/spec/helpers/profiles_helper_spec.rb	describe "string concat" do
 terms_of_use	/home/nou/rails_projects/antgrape/app/controllers/home_controller.rb	  def terms_of_use
 test_homepage	/home/nou/rails_projects/antgrape/test/performance/browsing_test.rb	  def test_homepage
@@ -231,17 +231,17 @@ the "([^"]*)" field(?: within "([^"]*)")? should not contain "([^"]*)"	/home/nou
 toggle_select_token	/home/nou/rails_projects/antgrape/public/javascripts/jquery.tokeninput.js	function toggle_select_token(token)
 up	/home/nou/rails_projects/antgrape/db/migrate/20111207183813_create_rails_admin_histories_table.rb	   def self.up
 up	/home/nou/rails_projects/antgrape/db/migrate/20111207223714_users_have_and_belongs_to_many_roles.rb	  def up
-up	/home/nou/rails_projects/antgrape/db/migrate/20111220174104_add_city_to_users.rb	  def self.up 
-up	/home/nou/rails_projects/antgrape/db/migrate/20120104214302_add_city_to_profiles.rb	  def self.up 
-up	/home/nou/rails_projects/antgrape/db/migrate/20120102220755_create_metropoli_states.rb	  def self.up
-up	/home/nou/rails_projects/antgrape/db/migrate/20120117062418_create_messages_table.rb	  def self.up
-up	/home/nou/rails_projects/antgrape/db/migrate/20120106174702_add_avatar_to_profile.rb	  def self.up
-up	/home/nou/rails_projects/antgrape/db/migrate/20120102220754_create_metropoli_countries.rb	  def self.up
-up	/home/nou/rails_projects/antgrape/db/migrate/20120117062419_create_message_copies_table.rb	  def self.up
 up	/home/nou/rails_projects/antgrape/db/migrate/20111219164231_acts_as_taggable_on_migration.rb	  def self.up
+up	/home/nou/rails_projects/antgrape/db/migrate/20111220174104_add_city_to_users.rb	  def self.up 
+up	/home/nou/rails_projects/antgrape/db/migrate/20120102220754_create_metropoli_countries.rb	  def self.up
+up	/home/nou/rails_projects/antgrape/db/migrate/20120102220755_create_metropoli_states.rb	  def self.up
 up	/home/nou/rails_projects/antgrape/db/migrate/20120102220756_create_metropoli_cities.rb	  def self.up 
-update	/home/nou/rails_projects/antgrape/app/controllers/fellowships_controller.rb	  def update
+up	/home/nou/rails_projects/antgrape/db/migrate/20120104214302_add_city_to_profiles.rb	  def self.up 
+up	/home/nou/rails_projects/antgrape/db/migrate/20120106174702_add_avatar_to_profile.rb	  def self.up
+up	/home/nou/rails_projects/antgrape/db/migrate/20120117062418_create_messages_table.rb	  def self.up
+up	/home/nou/rails_projects/antgrape/db/migrate/20120117062419_create_message_copies_table.rb	  def self.up
 update	/home/nou/rails_projects/antgrape/app/controllers/coworker_requests_controller.rb	  def update
+update	/home/nou/rails_projects/antgrape/app/controllers/fellowships_controller.rb	  def update
 updates the requested coworker_request	/home/nou/rails_projects/antgrape/spec/controllers/coworker_requests_controller_spec.rb	it "updates the requested coworker_request" do
 updates the requested profile	/home/nou/rails_projects/antgrape/spec/controllers/profiles_controller_spec.rb	it "updates the requested profile" do
 valid_attributes	/home/nou/rails_projects/antgrape/spec/controllers/coworker_requests_controller_spec.rb	  def valid_attributes
@@ -255,5 +255,5 @@ with valid params	/home/nou/rails_projects/antgrape/spec/controllers/coworker_re
 with valid params	/home/nou/rails_projects/antgrape/spec/controllers/profiles_controller_spec.rb	describe "with valid params" do
 with valid params	/home/nou/rails_projects/antgrape/spec/controllers/profiles_controller_spec.rb	describe "with valid params" do
 with_scope	/home/nou/rails_projects/antgrape/features/step_definitions/web_steps.rb	  def with_scope(locator)
-works! (now write some real specs)	/home/nou/rails_projects/antgrape/spec/requests/profiles_spec.rb	it "works! (now write some real specs)" do
 works! (now write some real specs)	/home/nou/rails_projects/antgrape/spec/requests/coworker_requests_spec.rb	it "works! (now write some real specs)" do
+works! (now write some real specs)	/home/nou/rails_projects/antgrape/spec/requests/profiles_spec.rb	it "works! (now write some real specs)" do

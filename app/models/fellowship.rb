@@ -1,12 +1,21 @@
 class Fellowship < ActiveRecord::Base
-  STATUS = {:pending => "pending", 
-            :working => "working", 
-            :rejected => "rejected", 
-            :worked => "worked"}
+  # Constants
+  STATUSES = {:pending => 0, 
+            :working => 1, 
+            :rejected => 2,
+            :worked => 3}
   
   # Associations
-  belongs_to :inviter, :class_name => "User"
-  belongs_to :invited, :class_name => "User"
+  belongs_to :inviter, :class_name => "User" 
+  belongs_to :invited, :class_name => 'User'
+  
+  
+  # Instance Methods
+  STATUSES.each do |k, v|
+    define_method "#{k}?" do
+      endself.status == STATUSES[k]
+    end
+  end
 end
 
 # == Schema Information
