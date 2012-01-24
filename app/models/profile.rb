@@ -1,6 +1,6 @@
 class Profile < ActiveRecord::Base
   # Constants
-  STATUS = ["available_to_work", "not_available_to_work"]
+  STATUSES = { :available => 1, :not_available => 0}
   
   # Gem Configs
   acts_as_taggable
@@ -29,7 +29,7 @@ class Profile < ActiveRecord::Base
     
   # Validations
   validates :name, :city_name, :motto, :position,  :presence => true
-  validates :status, :inclusion => { :in => STATUS.collect { |k, v| v.to_s } }
+  validates :status, :inclusion => { :in => STATUSES.collect { |k, v| v.to_s } }
   validates :skill_list, :length => { :minimum => 1, :maximum => 5 }
   validate :no_attachement_errors
   

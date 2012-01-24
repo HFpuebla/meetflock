@@ -44,8 +44,8 @@ ActiveRecord::Schema.define(:version => 20120118065109) do
   add_index "coworker_requests", ["user_id"], :name => "index_coworker_requests_on_user_id"
 
   create_table "fellowships", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "coworker_id"
+    t.integer  "inviter_id"
+    t.integer  "invited_id"
     t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"

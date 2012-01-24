@@ -1,4 +1,4 @@
-1327350203
+1327363360
 (?:|I )attach the file "([^"]*)" to "([^"]*)"(?: within "([^"]*)")?	/home/nou/rails_projects/antgrape/features/step_definitions/web_steps.rb	When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"(?: within "([^"]*)")?$/ do
 (?:|I )check "([^"]*)"	/home/nou/rails_projects/antgrape/features/step_definitions/web_steps.rb	When /^(?:|I )check "([^"]*)"$/ do
 (?:|I )choose "([^"]*)"	/home/nou/rails_projects/antgrape/features/step_definitions/web_steps.rb	When /^(?:|I )choose "([^"]*)"$/ do
@@ -82,8 +82,8 @@ Profile	/home/nou/rails_projects/antgrape/app/models/profile.rb	class Profile
 Profiles	/home/nou/rails_projects/antgrape/spec/requests/profiles_spec.rb	describe "Profiles" do
 ProfilesController	/home/nou/rails_projects/antgrape/app/controllers/profiles_controller.rb	class ProfilesController 
 Role	/home/nou/rails_projects/antgrape/app/models/role.rb	class Role 
-STATUS	/home/nou/rails_projects/antgrape/app/models/profile.rb	  STATUS =
 STATUSES	/home/nou/rails_projects/antgrape/app/models/fellowship.rb	  STATUSES =
+STATUSES	/home/nou/rails_projects/antgrape/app/models/profile.rb	  STATUSES =
 TestCase	/home/nou/rails_projects/antgrape/test/test_helper.rb	class ActiveSupport::TestCase
 User	/home/nou/rails_projects/antgrape/app/models/user.rb	class User 
 User create profile	/home/nou/rails_projects/antgrape/features/user_create_profile.feature	Feature: User create profile
@@ -154,9 +154,9 @@ edit_profile	/home/nou/rails_projects/antgrape/app/controllers/profiles_controll
 expire_position_all_cache	/home/nou/rails_projects/antgrape/app/models/position.rb	  def expire_position_all_cache
 expire_position_all_cache	/home/nou/rails_projects/antgrape/app/models/role.rb	  def expire_position_all_cache
 expire_profile_all_cache	/home/nou/rails_projects/antgrape/app/models/profile.rb	  def expire_profile_all_cache
+fellowship_status_link	/home/nou/rails_projects/antgrape/app/helpers/application_helper.rb	  def fellowship_status_link(*args)
 fellowship_status_url	/home/nou/rails_projects/antgrape/app/helpers/fellowships_helper.rb	  def fellowship_status_url(user)
 find_model	/home/nou/rails_projects/antgrape/app/controllers/users_controller.rb	  def find_model
-find_model	/home/nou/rails_projects/antgrape/app/helpers/application_helper.rb	  def find_model
 highlight_term	/home/nou/rails_projects/antgrape/public/javascripts/jquery.tokeninput.js	function highlight_term(value, term)
 index	/home/nou/rails_projects/antgrape/app/controllers/coworker_requests_controller.rb	  def index
 index	/home/nou/rails_projects/antgrape/app/controllers/home_controller.rb	  def index

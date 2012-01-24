@@ -12,8 +12,9 @@ class User < ActiveRecord::Base
   has_one :profile
   has_and_belongs_to_many :roles
   has_many :coworker_requests
-  has_many :fellowships
+  has_many :fellowships, :foreign_key => "inviter_id"
   has_many :coworkers, :through => :fellowships, :foreign_key => "invited_id"
+  has_many :inverse_coworkers, :through => :fellowships, :foreign_key => "inviter_id"
   
   # Validations
   validates :username, :uniqueness => true
@@ -39,5 +40,13 @@ end
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  name                   :string(255)
+#  motto                  :text
+#  website                :string(255)
+#  status                 :string(255)
+#  receive_newsletter     :boolean
+#  location_id            :integer
+#  city_id                :integer
+#  username               :string(255)
 #
 

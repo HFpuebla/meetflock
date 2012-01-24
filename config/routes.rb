@@ -3,10 +3,11 @@ Antgrape::Application.routes.draw do
   
   resources :coworker_requests
   resources :fellowships
+  resources :profiles
   
   match 'looking-for' => 'coworker_requests#index', :as => "looking_for" 
 
-  match 'profile' => 'profiles#profile', :as => "profile"
+  match 'my-profile' => 'profiles#profile', :as => "my_profile"
   match 'edit-profile' => 'profiles#edit_profile', :as => "edit_profile"
   match '/' => 'profiles#index', :as => "profiles"
 
