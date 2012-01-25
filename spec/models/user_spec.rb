@@ -20,5 +20,13 @@ end
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  name                   :string(255)
+#  motto                  :text
+#  website                :string(255)
+#  status                 :string(255)
+#  receive_newsletter     :boolean
+#  location_id            :integer
+#  city_id                :integer
+#  username               :string(255)
 #
 

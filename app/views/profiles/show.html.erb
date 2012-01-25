@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<%= @profile.avatar? ? image_tag(profile.avatar.url :small) : image_tag('holders/avatar.jpg') %><%= link_to '', @profile %>
+
+<p>
+  <b>Name:</b>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <b>Motto:</b>
+  <%= @profile.motto %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @profile.website %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @profile.skill_list %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @profile.status %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @profile.city_name %>
+</p>
+
+<p id="fellowship_status_link">
+<%= fellowship_status_link(current_user, @profile.user) %>
+</p>

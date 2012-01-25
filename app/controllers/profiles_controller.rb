@@ -6,13 +6,17 @@ class ProfilesController < ApplicationController
     @profiles = @search.paginate(:page => params[:page], :per_page => 20) 
     respond_to do |format|
       format.html
-      format.js
       format.json { render json: @profiles }
+      format.js
     end
   end
   
   def show
-    
+    @profile = Profile.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @profile }
+    end
   end
   
   # Shows the logged user profile

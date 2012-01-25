@@ -5,8 +5,6 @@ class CoworkerRequest < ActiveRecord::Base
   # Associations
   belongs_to :position
   belongs_to :user
-  has_many :fellowships
-  has_many :coworkers, :through => :fellowships 
   
   # Validations
   validates :position, :presence => true
