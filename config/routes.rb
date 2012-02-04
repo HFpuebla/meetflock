@@ -2,8 +2,10 @@ Antgrape::Application.routes.draw do
   mailboxes_for :users
   
   resources :coworker_requests
-  resources :fellowships
   resources :profiles
+  
+  match 'create-fellowship' => 'fellowships#create', :as => "create_fellowship", :via => :post
+  match 'update-fellowship' => 'fellowships#update', :as => "update_fellowship", :via => :post
   
   match 'looking-for' => 'coworker_requests#index', :as => "looking_for" 
 

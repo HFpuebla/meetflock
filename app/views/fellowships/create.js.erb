@@ -1,5 +1,1 @@
-<% if @fellowship.exists? %>
-	
-<% else %>
-
-<% end %>
+$("#fellowship_status_link").html("<%=j fellowship_status_link(current_user, @visited) %>");
