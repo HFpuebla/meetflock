@@ -11,6 +11,10 @@ class ProfilesController < ApplicationController
     end
   end
   
+  def new
+    redirect_to new_user_registration_path
+  end
+  
   def show
     @profile = Profile.find(params[:id])
     respond_to do |format|

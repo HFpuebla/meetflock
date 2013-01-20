@@ -1,19 +1,14 @@
-Feature: User create profile
-  In order to publish my profile online
+Feature: User creates profile
+
   As a user
   I want fill my profile basic info
+  So that I can log-in the site 
 
-Scenario Outline: fill in minimal required info successfully
-  Given context
-  When event
-  Then outcome
-
-Scenario Outline: required fields are missing
-  Given context
-  When event
-  Then outcome
-
-
-
-
+Scenario: signup
+  Given  I am on signup
+  Then I should see "Sign up"
   
+Scenario: signup
+  When I go to new user registration
+  Then I should see "Sign in"
+
