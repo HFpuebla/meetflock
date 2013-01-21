@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+	<script type="text/javascript" src="http://use.typekit.com/rlm2emx.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script src="js/bootstrap-modal.js"></script>
+	<script src="js/bootstrap-alerts.js"></script>
+	
+    <link href="stylesheets/css/bootstrap.css" rel="stylesheet">
+	<link href="stylesheets/css/style.css" rel="stylesheet">
+	
+	<script type="text/javascript">
+	
+	
+		$(document).ready(function() {
+		
+		
+				$('#reply-message').click(function() {
+				  $('#reply-form').slideToggle('medium');
+				});
+		
+				$('#reply-form a.cancel').click(function() {
+				  $('#reply-form').slideUp('medium');
+				});
+		
+		});
+	
+	</script>
+	
+
+	
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+  </head>
+
+  <body>
+
+	
+	<div class="topbar">
+	  <div class="fill">
+	    <div class="container">
+	      <a class="brand" href="#">AntGrape</a>
+	      <ul class="nav">
+	        <li class="active"><a href="#">Descubre <span>Tu Equipo</span></a></li>
+	        <li><a href="#about">Crea <span>Tu Perfil</span></a></li>
+	      </ul>
+	      <ul class="sub-nav">
+	      	<li><a href="#">Sign-Up</a></li>
+	      	<li><a href="#">Log In</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+	
+	<div id="intro">
+		<div class="container">
+		</div>
+	
+	</div>
+
+    <div class="container" role="content">
+
+      <div class="row">
+      	<div id="message" class="span11">
+      		<div id="message-inner">
+      			<h2>Inbox <span class="title">/ Ant Grape Project</span></h2>
+				
+				
+				<div id="reply">
+					<h3><a id="reply-message" href="#">Reply</a></h3>
+					<form id="reply-form">
+						<div class="to"><strong>To:</strong><span>Arnoldo Colin</span></div>
+						<textarea>
+						
+						
+						</textarea>
+						<div class="form-action">
+							<a href="#" class="cancel">Cancel</a>
+							<input type="submit" value="Send Message" name="submit" class="contact-me">
+						</div>
+						
+					</form>
+				</div>
+				
+				
+				<div id="history">
+					<div class="message">
+						<div class="from">
+							<img src="images/holders/avatar9.png" alt="" />
+						</div>
+						
+						<div class="message-container">
+							<h3>Alfredo Canales</h3>
+							<span class="date">June 8, 10:30 AM PST </span>
+							<div class="body">
+								<p>Ya le va ! Nos vemos en el Starbucks entonces.</p>
+								
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="message">
+						<div class="from">
+							<img src="images/holders/avatar6.jpg" alt="" />
+						</div>
+						
+						<div class="message-container">
+							<h3>Arnoldo Colin</h3>
+							<span class="date">June 8, 10:30 AM PST </span>
+							<div class="body">
+								<p>"'Will you promise not to touch us, if we do?' demanded their ringleader.</p>
+								
+								<p>"'Turn to! turn to!&mdash;I make no promise;&mdash;to your duty! Do you want to sink the ship, by knocking off at a time like this? Turn to!' and he once more raised a pistol.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="message">
+						<div class="from">
+							<img src="images/holders/avatar9.png" alt="" />
+						</div>
+						
+						<div class="message-container">
+							<h3>Alfredo Canales</h3>
+							<span class="date">June 8, 10:30 AM PST </span>
+							<div class="body">
+								<p>"'Will you promise not to touch us, if we do?' demanded their ringleader.</p>
+								
+								<p>"'Turn to! turn to!&mdash;I make no promise;&mdash;to your duty! Do you want to sink the ship, by knocking off at a time like this? Turn to!' and he once more raised a pistol.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+	
+ 			
+      			
+      		</div>
+      	</div>
+		
+      </div>
+
+      <footer>
+        <p>&copy; Company 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+    
+
+
+  </body>
+</html>
