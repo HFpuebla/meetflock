@@ -1,6 +1,8 @@
 class Profile < ActiveRecord::Base
+
   # Constants
-  STATUSES = { :available => 1, :not_available => 0}
+  STATUSES = {  :available => 1, 
+                :not_available => 0}
   
   # Gem Configs
   acts_as_taggable
@@ -49,6 +51,16 @@ class Profile < ActiveRecord::Base
   
   def expire_profile_all_cache
     Rails.cache.delete('Profile.all')
+  end
+  
+  def get_status
+   
+    if self.status == 1
+      return t
+    else
+    end
+    
+      
   end
   
 end

@@ -3,9 +3,10 @@ class FellowshipsController < ApplicationController
   
   def create
     @fellowship = Fellowship.create!(:inviter_id => current_user.id, :invited_id => @visited.id, :status => Fellowship::STATUSES[:pending])
-    @fellowship.save
     
+    @fellowship.save
     respond_to do |format|
+      UserMailer.new_fellowship_email(@visited.id, current_user.id).deliver
       format.js
     end
   end
@@ -23,5 +24,10 @@ class FellowshipsController < ApplicationController
 
   def find_visited
     @visited = User.find(params[:visited_id])
+  end
+  
+  def index
+    @fellowships = Fellowship.my_fellows(current_user)
+    
   end
 end

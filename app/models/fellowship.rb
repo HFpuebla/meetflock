@@ -1,7 +1,4 @@
 class Fellowship < ActiveRecord::Base
-  #Scopes
-  scope :between_users, lambda { |visitor, visited| where("inviter_id = #{visitor.id} and invited_id = #{visited.id} 
-                                                           or inviter_id = #{visited.id} and invited_id = #{visitor.id}")  }
   
   # Constants
   STATUSES = {:pending => 0, 
@@ -13,6 +10,17 @@ class Fellowship < ActiveRecord::Base
   belongs_to :inviter, :class_name => "User", :foreign_key => "inviter_id"
   belongs_to :invited, :class_name => 'User', :foreign_key => "invited_id"
   
+  
+  def self.between_users (visitor, visited)
+    where("inviter_id = #{visitor.id} and invited_id = #{visited.id} 
+          or inviter_id = #{visited.id} and invited_id = #{visitor.id}").first  
+  end
+  
+  
+  #The people who has a fellowship with me.
+  def self.my_fellows (current_user)
+    where("invited_id = #{current_user.id}") 
+  end
   
   # Instance Methods
   STATUSES.each do |k, v|

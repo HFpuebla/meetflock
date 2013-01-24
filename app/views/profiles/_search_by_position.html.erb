@@ -1,12 +1,18 @@
+
+
+
+<% if !@profiles.empty? %>
+
 <%= form_for @search do |f| %>
 <h4>Filter by</h4>
 <ul>
-  <% f.checks :position_name_in,
-    Position.with_profiles.collect { |p| [t(p.name), p.name] }, :class => 'submittable' do |check| %>
+  <% f.checks :position_name_in, Position.with_profiles.collect { |p| [t(p.name), p.name] }, :class => 'submittable' do |check| %>
     <li>
       <%= check.box %>
       <%= check.label %>
     </li>
   <% end %>
 </ul>
+<% end %>
+
 <% end %>

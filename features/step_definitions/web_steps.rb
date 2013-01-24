@@ -87,7 +87,6 @@ When /^(?:|I )choose "([^"]*)"$/ do |field|
 end
 
 When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"(?: within "([^"]*)")?$/ do |path, field, selector|
-  with_scope(selector) do
     attach_file(field, path)
   end
 end

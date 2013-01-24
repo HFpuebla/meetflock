@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Hola, <%= @invited.name %></h1>
+    <p>
+      Acabas de recibir una invitaci&oacute;n de <%= @inviter.name %>, 
+      para trabajar juntos.<br/>
+    </p>
+    <p>
+      Para entrar al sitio y ver la invitaci&oacute;n sigue el siguiente link:<br/>
+      <%= @url %>
+    </p>
+    <p>Te esperamos en Meetflock!</p>
+  </body>
+</html>
