@@ -1,8 +1,5 @@
 --- 
 open_files: 
-  - app/models/position.rb
-  - app/models/fellowship.rb
-  - app/models/role.rb
-  - app/models/profile.rb
   - app/models/coworker_request.rb
-  - app/models/user.rb
+  - app/helpers/application_helper.rb
+  - app/controllers/profiles_controller.rb

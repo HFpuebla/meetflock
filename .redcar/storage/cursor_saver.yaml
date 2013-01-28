@@ -12,46 +12,139 @@ cursor_positions:
   - :path: app/assets/javascripts/home.js.coffee
     :cursor_offset: 229
     :timestamp: 2012-01-21 18:47:14 -06:00
-  - :path: config/routes.rb
-    :cursor_offset: 378
-    :timestamp: 2012-01-21 18:49:49 -06:00
-  - :path: app/views/layouts/application.html.erb
-    :cursor_offset: 320
-    :timestamp: 2012-01-21 18:47:19 -06:00
-  - :path: Gemfile
-    :cursor_offset: 927
-    :timestamp: 2012-01-21 18:47:19 -06:00
-  - :path: config/database.yml
-    :cursor_offset: 361
-    :timestamp: 2012-01-21 18:23:52 -06:00
-    :selection_offset: 354
-    :block_selection_mode: false
-  - :path: app/views/profiles/_search_by_position.html.erb
-    :cursor_offset: 256
-    :timestamp: 2012-01-21 19:12:07 -06:00
   - :path: db/sample/users.rb
     :cursor_offset: 0
     :timestamp: 2012-01-21 18:03:01 -06:00
-  - :path: app/models/position.rb
-    :cursor_offset: 56
-    :timestamp: 2012-01-21 20:20:12 -06:00
-  - :path: app/models/fellowship.rb
-    :cursor_offset: 70
-    :timestamp: 2012-01-21 21:41:38 -06:00
-    :selection_offset: 63
-    :block_selection_mode: false
   - :path: app/models/role.rb
     :cursor_offset: 0
     :timestamp: 2012-01-21 18:47:19 -06:00
-  - :path: app/models/profile.rb
-    :cursor_offset: 258
-    :timestamp: 2012-01-21 20:45:39 -06:00
-  - :path: app/models/coworker_request.rb
-    :cursor_offset: 286
-    :timestamp: 2012-01-21 20:58:40 -06:00
-    :selection_offset: 283
+  - :path: Gemfile
+    :cursor_offset: 1037
+    :timestamp: 2012-02-04 16:27:46 -06:00
+  - :path: features/visitor_can_see_list_of_entrepreneurs.feature
+    :cursor_offset: 392
+    :timestamp: 2012-02-04 13:40:24 -06:00
+  - :path: features/step_definitions/user_steps.rb
+    :cursor_offset: 283
+    :timestamp: 2012-02-04 13:40:24 -06:00
+  - :path: features/step_definitions/web_steps.rb
+    :cursor_offset: 2063
+    :timestamp: 2012-02-04 13:40:24 -06:00
+  - :path: spec/models/user_spec.rb
+    :cursor_offset: 200
+    :timestamp: 2012-02-04 13:40:24 -06:00
+  - :path: app/views/users/_form.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-02-04 13:40:24 -06:00
+    :selection_offset: 211
     :block_selection_mode: false
+  - :path: features/support/paths.rb
+    :cursor_offset: 339
+    :timestamp: 2012-02-04 17:51:10 -06:00
+    :selection_offset: 314
+    :block_selection_mode: false
+  - :path: app/views/profiles/_search_by_position.html.erb
+    :cursor_offset: 10
+    :timestamp: 2012-02-04 18:49:05 -06:00
+    :selection_offset: 9
+    :block_selection_mode: false
+  - :path: config/initializers/devise.rb
+    :cursor_offset: 8214
+    :timestamp: 2012-02-04 13:40:24 -06:00
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 29
+    :timestamp: 2012-02-04 19:20:24 -06:00
+  - :path: app/views/profiles/index.html.erb
+    :cursor_offset: 164
+    :timestamp: 2012-02-04 19:18:08 -06:00
+  - :path: app/controllers/users_controller.rb
+    :cursor_offset: 159
+    :timestamp: 2012-02-04 18:57:02 -06:00
+  - :path: app/views/users/index.html.erb
+    :cursor_offset: 24
+    :timestamp: 2012-02-04 18:21:06 -06:00
+  - :path: app/helpers/fellowships_helper.rb
+    :cursor_offset: 0
+    :timestamp: 2012-02-04 13:40:24 -06:00
+  - :path: app/views/devise/registrations/new.html.erb
+    :cursor_offset: 296
+    :timestamp: 2012-02-08 17:41:31 -06:00
+  - :path: config/database.yml
+    :cursor_offset: 1046
+    :timestamp: 2012-02-04 16:46:09 -06:00
+  - :path: db/migrate/20120117180256_create_fellowships.rb
+    :cursor_offset: 232
+    :timestamp: 2012-02-08 17:53:48 -06:00
+  - :path: config/routes.rb
+    :cursor_offset: 936
+    :timestamp: 2012-02-04 19:50:52 -06:00
+  - :path: log/test.log
+    :cursor_offset: 13432
+    :timestamp: 2012-02-04 18:00:14 -06:00
+    :selection_offset: 13437
+    :block_selection_mode: false
+  - :path: app/views/fellowships/create.js.erb
+    :cursor_offset: 92
+    :timestamp: 2012-02-04 13:40:24 -06:00
+    :selection_offset: 0
+    :block_selection_mode: false
+  - :path: app/views/profiles/show.html.erb
+    :cursor_offset: 374
+    :timestamp: 2012-02-08 17:58:16 -06:00
+  - :path: features/user_create_profile.feature
+    :cursor_offset: 271
+    :timestamp: 2012-02-04 17:58:41 -06:00
+  - :path: creating_users.1.rb
+    :cursor_offset: 220
+    :timestamp: 2012-02-04 15:53:17 -06:00
+  - :path: app/models/position.rb
+    :cursor_offset: 0
+    :timestamp: 2012-02-04 13:40:24 -06:00
+  - :path: config/application.rb
+    :cursor_offset: 1615
+    :timestamp: 2012-02-09 17:53:08 -06:00
+  - :path: app/views/user_mailer/new_fellowship_email.html.erb
+    :cursor_offset: 248
+    :timestamp: 2012-02-09 18:03:43 -06:00
   - :path: app/models/user.rb
-    :cursor_offset: 352
-    :timestamp: 2012-01-21 21:47:11 -06:00
+    :cursor_offset: 530
+    :timestamp: 2012-02-04 13:40:24 -06:00
+  - :path: app/models/profile.rb
+    :cursor_offset: 188
+    :timestamp: 2012-02-08 18:39:49 -06:00
+  - :path: app/models/fellowship.rb
+    :cursor_offset: 723
+    :timestamp: 2012-02-08 20:29:30 -06:00
+  - :path: app/mailers/user_mailer.rb
+    :cursor_offset: 375
+    :timestamp: 2012-02-09 19:25:08 -06:00
+  - :path: app/models/coworker_request.rb
+    :cursor_offset: 156
+    :timestamp: 2012-02-04 13:40:24 -06:00
+  - :path: app/helpers/application_helper.rb
+    :cursor_offset: 261
+    :timestamp: 2012-02-09 22:56:58 -06:00
+  - :path: app/controllers/profiles_controller.rb
+    :cursor_offset: 424
+    :timestamp: 2012-02-04 18:12:31 -06:00
+  - :path: app/views/fellowships/index..html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-02-09 19:35:31 -06:00
+  - :path: app/views/fellowships/update.js.erb
+    :cursor_offset: 25
+    :timestamp: 2012-02-04 13:40:24 -06:00
+  - :path: app/views/profiles/index.js.erb
+    :cursor_offset: 0
+    :timestamp: 2012-02-04 13:40:24 -06:00
+  - :path: app/views/layouts/_header.html.erb
+    :cursor_offset: 100
+    :timestamp: 2012-02-04 19:21:48 -06:00
+  - :path: app/views/profiles/_profile.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-02-04 13:40:24 -06:00
+    :selection_offset: 444
+    :block_selection_mode: false
+  - :path: app/views/profiles/profile.html.erb
+    :cursor_offset: 131
+    :timestamp: 2012-02-04 13:40:24 -06:00
 files_to_retain: 0

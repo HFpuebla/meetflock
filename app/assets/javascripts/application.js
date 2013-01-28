@@ -7,6 +7,7 @@
 //= require jquery.min
 //= require jquery-ui.min
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require_tree .
 //= require jquery.tagsinput.min
 //= require metropoli.jquery.ui

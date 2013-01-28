@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.3'
+gem 'rails'
 
 # Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+#gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
 gem 'devise'
@@ -19,6 +19,7 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'dalli'
 gem "meta_search"
 gem 'will_paginate', '~> 3.0'
+gem 'twitter-bootstrap-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -48,7 +49,6 @@ group :test, :development do
   gem 'cucumber-rails'
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
   gem 'email_spec'
-  gem 'heroku'
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'capybara'

@@ -1,17 +1,19 @@
 Antgrape::Application.routes.draw do
   mailboxes_for :users
-  
+
   resources :coworker_requests
   resources :profiles
-  
+
   match 'create-fellowship' => 'fellowships#create', :as => "create_fellowship", :via => :post
   match 'update-fellowship' => 'fellowships#update', :as => "update_fellowship", :via => :post
-  
-  match 'looking-for' => 'coworker_requests#index', :as => "looking_for" 
+
+  match 'looking-for' => 'coworker_requests#index', :as => "looking_for"
 
   match 'my-profile' => 'profiles#profile', :as => "my_profile"
   match 'edit-profile' => 'profiles#edit_profile', :as => "edit_profile"
+  root :to => 'profiles#index'
   match '/' => 'profiles#index', :as => "profiles"
+  match 'privacy-policy' => 'profiles#policy', :as => "profiles"
 
   metropoli_for :cities, :states, :countries
 
@@ -22,7 +24,7 @@ Antgrape::Application.routes.draw do
     get '/logout'  => 'devise/sessions#destroy',   :as => :destroy_user_session
     get "/signup"   => "devise/registrations#new",   :as => :new_user_registration
   end
-  
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   # The priority is based upon order of creation:
@@ -74,7 +76,6 @@ Antgrape::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'profiles#index'
 
   # See how all your routes lay out with "rake routes"
 

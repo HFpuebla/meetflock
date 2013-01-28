@@ -1,17 +1,35 @@
-<h2>Sign in</h2>
+<%= content_for :default do %>
+<%= form_for(resource,:html => {:class=> "form-stacked span3", :id => "log-in"}, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <fieldset>
+    <legend>Log-in</legend>
+    <span class="form-notice">Please log in to continue.</span>
+    <div class="clearfix">
+      <label for="email"><%= f.label :email %></label>
+      <div class="input">
+        <%= f.email_field :email, :class => "input-xlarge" %>
+      </div>
+    </div>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+    <div class="clearfix">
+      <label for="password"><%= f.label :password %></label>
+      <div class="input">
+        <%= f.password_field :password %>
+      </div>
+    </div>
+  </fieldset>
 
   <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <div class="clearfix">
+      <label class="checkbox">
+        <%= f.check_box :remember_me %><%= f.label :remember_me %>
+      </label>
+    </div>
   <% end -%>
+  <div class="actions">
+    <%= f.submit "Sign in", :class => "save" %>
+  </div>
 
-  <div><%= f.submit "Sign in" %></div>
+  <%= render :partial => "devise/shared/links" %>
+
 <% end %>
-
-<%= render :partial => "devise/shared/links" %>
+<% end %>

@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(:version => 20120118065109) do
   create_table "fellowships", :force => true do |t|
     t.integer  "inviter_id"
     t.integer  "invited_id"
-    t.integer  "status"
+    t.integer  "statu",      :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

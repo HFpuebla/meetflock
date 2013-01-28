@@ -1,22 +1,103 @@
-<h2>Sign up</h2>
+<div id="intro">
+  <div class="container">
+  </div>
+</div>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div class="container" role="content">
+  <div class="row">
+    <div id="sign-up" class="span9 offset1">
+      <div id="sign-up-inner">
+        <h2>Sign-Up or Register</h2>
+        <div class="alert-message block-message error" data-alert="alert">
+          <a class="close" href="#">×</a>
+          <p><strong>Oh snap! You got an error!</strong> Change this and that and <a href="#">try again</a>.</p>
+          <ul>
+            <li>Duis mollis est non commodo luctus</li>
+            <li>Nisi erat porttitor ligula</li>
+            <li>Eget lacinia odio sem nec elit</li>
+          </ul>
+        </div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
 
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username %></div>
+        <%= form_for(resource,:html => {:class=> "form-stacked span3", :id => "log-in"}, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+          <fieldset>
+            <legend>Log-in</legend>
+            <span class="form-notice">Please log in to continue.</span>
+            <div class="clearfix">
+              <label for="email"><%= f.label :email %></label>
+              <div class="input">
+                <%= f.email_field :email, :class => "input-xlarge" %>
+              </div>
+            </div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+            <div class="clearfix">
+              <label for="password"><%= f.label :password %></label>
+              <div class="input">
+                <%= f.password_field :password %>
+              </div>
+            </div>
+          </fieldset>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+          <% if devise_mapping.rememberable? -%>
+            <div class="clearfix">
+              <label class="checkbox">
+                <%= f.check_box :remember_me %><%= f.label :remember_me %>
+              </label>
+            </div>
+          <% end -%>
+          <div class="actions">
+            <%= f.submit "Sign in", :class => "save" %>
+          </div>
 
-	<p>By clicking sign up I accept the terms of service and privacy policy</p>
-	<div><%= f.submit "Sign up" %></div>
-<% end %>
+          <%= render :partial => "devise/shared/links" %>
 
-<%= render :partial => "devise/shared/links" %>
+        <% end %>
+
+        <%= form_for(resource, :html => {:class=>"form-stacked span3", :id=>"register"},:as => resource_name, :url => registration_path(resource_name)) do |f| %>
+          <fieldset>
+            <legend>New to Meetflock?</legend>
+            <span class="form-notice">A Meetflock account is required to continue.</span>
+            <%= devise_error_messages! %>
+            <div class="clearfix">
+              <label for="name"><%= f.label :username %></label>
+              <div class="input">
+                <%= f.text_field :username, :class => "input-xlarge" %>
+              </div>
+            </div>
+
+            <div class="clearfix">
+              <label for="email"><%= f.label :email %></label>
+              <div class="input">
+                <%= f.email_field :email,:class => "input-xlarge" %>
+              </div>
+            </div>
+
+            <div class="clearfix">
+              <label for="password"><%= f.label :password %></label>
+              <div class="input">
+                <%= f.password_field :password, :class => "input-xlarge" %>
+              </div>
+            </div>
+
+            <div class="clearfix">
+              <label for="confirm-password"><%= f.label :password_confirmation %></label>
+              <div class="input">
+                <%= f.password_field :password_confirmation, :class => "input-xlarge" %>
+              </div>
+            </div>
+
+            <div class="clearfix">
+              <p>By clicking sign up I accept the terms of service and privacy policy</p>
+            </div>
+
+          </fieldset>
+
+          <div class="actions">
+            <div><%= f.submit "Register", :class => "save" %></div>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div> <!-- /container -->
