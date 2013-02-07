@@ -15,9 +15,9 @@ Ayúdanos a hacerlo crecer.
 
 
 ##Necesitamos
-- [ ] Diseñador/consultor para imagen corporativa
-- [ ] Diseñador Web
-- [ ] Developer Front&Back end que sepa Ruby on Rails
+- Diseñador/consultor para imagen corporativa
+- Diseñador Web
+- Developer Front&Back end que sepa Ruby on Rails
 
 
 
