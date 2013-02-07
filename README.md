@@ -9,21 +9,10 @@ El proyecto actualmente está siendo desarrollado por miembros de Hackers and Fo
 Ayúdanos a hacerlo crecer.
 
 
-<pre>
-             ,-.
-    ,     ,-.   ,-.
-   / \   (   )-(   )
-   \ |  ,.>-(   )-<
-    \|,' (   )-(   )
-     Y ___`-'   `-'
-     |/__/   `-'
-     |
-     |
-     |    -hrr-
-  ___|_____________
-</pre>
-
-
+##Necesitamos
+- [ ] Diseñador/consultor para imagen corporativa
+- [ ] Diseñador Web
+- [ ] Developer Front&Back end que sepa Ruby on Rails
 
 
 
