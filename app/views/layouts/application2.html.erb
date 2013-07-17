@@ -1,12 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="description" content="Meetflock es una red social de curiosos y emprendedores. Conoce gente nueva.">
-    <meta name="author" content="Meetflock powered by H/F Puebla & Incaztech">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Meetflock" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Antgrape" %></title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -35,67 +34,49 @@
     <!-- For all other devices -->
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
-
-	<script type="text/javascript" src="http://use.typekit.com/rlm2emx.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    <%= yield :header %>
-
   </head>
   <body>
 
-    <div class="topbar">
-      <div class="fill">
-        <div class="container">
-          <a class="brand" href="/">Meetflock</a>
-          <ul class="nav">
-            <li><a href="#about">Descubre <span>Otros perfiles</span></a></li>
-          </ul>
-          <ul class="sub-nav">
+    <div class="navbar navbar-fluid-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Antgrape</a>
+          <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <% if user_signed_in? %>
-                <li>
-                  <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>
-                </li>
-              <% else %>
-                <li>
-                  <%= link_to('Login', new_user_session_path)  %>
-                </li>
-              <% end %>
-
-              <% if user_signed_in? %>
-                <li>
-                  <%= link_to('Tu cuenta', my_profile_path(:id => current_user.profile.id)) %>
-                </li>
-              <% else %>
-                <li>
-                  <%= link_to('Regístrate', new_user_registration_path)  %>
-                </li>
-              <% end %>
+              <li><%= link_to "Link1", "/path1"  %></li>
+              <li><%= link_to "Link2", "/path2"  %></li>
+              <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
-          </ul>
+          </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
-    <%= render partial: "layouts/messages", flash: flash %>
-
-    <%= yield :before_container %>
-
-    <div class="container">
-      <div class="row">
-        <div id="message" class="span11">
-          <% if content_for?(:default) %>
-            <%= yield(:default) %>
-          <% end %>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li><%= link_to "Link1", "/path1"  %></li>
+              <li><%= link_to "Link2", "/path2"  %></li>
+              <li><%= link_to "Link3", "/path3"  %></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <%= bootstrap_flash %>
+          <%= yield %>
         </div>
-      </div>
-
-      <%=yield %>
+      </div><!--/row-->
 
       <footer>
-        <%= yield :footer %>
-        <p>&copy; Meetflock 2013</p>
+        <p>&copy; Company 2012</p>
       </footer>
 
     </div> <!-- /container -->
