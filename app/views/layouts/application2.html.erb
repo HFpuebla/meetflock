@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Meetflock es una red social de curiosos y emprendedores. Conoce gente nueva.">
+    <meta name="author" content="Meetflock powered by H/F Puebla & Incaztech">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Meetflock" %></title>
+    <%= csrf_meta_tags %>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <!-- For third-generation iPad with high-resolution Retina display: -->
+    <!-- Size should be 144 x 144 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+
+    <!-- For iPhone with high-resolution Retina display: -->
+    <!-- Size should be 114 x 114 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+
+    <!-- For first- and second-generation iPad: -->
+    <!-- Size should be 72 x 72 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
+
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <!-- Size should be 57 x 57 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png' %>
+
+    <!-- For all other devices -->
+    <!-- Size should be 32 x 32 pixels -->
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+
+	<script type="text/javascript" src="http://use.typekit.com/rlm2emx.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <%= yield :header %>
+
+  </head>
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="/">Meetflock</a>
+          <ul class="nav">
+            <li><a href="#about">Descubre <span>Otros perfiles</span></a></li>
+          </ul>
+          <ul class="sub-nav">
+            <ul class="nav">
+              <% if user_signed_in? %>
+                <li>
+                  <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to('Login', new_user_session_path)  %>
+                </li>
+              <% end %>
+
+              <% if user_signed_in? %>
+                <li>
+                  <%= link_to('Tu cuenta', my_profile_path(:id => current_user.profile.id)) %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to('Regístrate', new_user_registration_path)  %>
+                </li>
+              <% end %>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <%= render partial: "layouts/messages", flash: flash %>
+
+    <%= yield :before_container %>
+
+    <div class="container">
+      <div class="row">
+        <div id="message" class="span11">
+          <% if content_for?(:default) %>
+            <%= yield(:default) %>
+          <% end %>
+        </div>
+      </div>
+
+      <%=yield %>
+
+      <footer>
+        <%= yield :footer %>
+        <p>&copy; Meetflock 2013</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag "application" %>
+
+  </body>
+</html>
