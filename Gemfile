@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+ruby '1.9.3'
+
 gem 'rails'
 
 # Bundle edge Rails instead:
@@ -20,6 +22,8 @@ gem 'dalli'
 gem "meta_search"
 gem 'will_paginate', '~> 3.0'
 gem 'twitter-bootstrap-rails'
+gem 'bootstrap_helper'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
