@@ -38,7 +38,7 @@ class ProfilesController < ApplicationController
         if !params[:profile]
           format.html #edit_profile.html.erb
         elsif @profile.update_attributes(params[:profile])
-          format.html { redirect_to profile_path, notice: 'Profile was successfully updated.' }
+          format.html { redirect_to profile_path(@profile), notice: 'Profile was successfully updated.' }
           format.json { head :ok }
         else
           format.html #edit_profile.html.erb

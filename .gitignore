@@ -1,5 +1,4 @@
-*.swp
-*.swo
+*.s[a-w][a-z]
 .#*
 .DS_Store
 .loadpath

@@ -1,22 +1,12 @@
 Antgrape::Application.routes.draw do
   mailboxes_for :users
 
-  resources :coworker_requests
-  resources :profiles
-
-  match 'create-fellowship' => 'fellowships#create', :as => "create_fellowship", :via => :post
-  match 'update-fellowship' => 'fellowships#update', :as => "update_fellowship", :via => :post
-
-  match 'looking-for' => 'coworker_requests#index', :as => "looking_for"
-
-  match 'my-profile' => 'profiles#profile', :as => "my_profile"
-  match 'edit-profile' => 'profiles#edit_profile', :as => "edit_profile"
   root :to => 'profiles#index'
-  match '/' => 'profiles#index', :as => "profiles"
   match 'privacy-policy' => 'profiles#policy', :as => "profiles"
 
   metropoli_for :cities, :states, :countries
-
+  resources :coworker_requests
+  resources :profiles
   # Override devise default routes for login, logout and signup
   devise_for :users do
     get '/login'   => "devise/sessions#new",       :as => :new_user_session
@@ -24,6 +14,17 @@ Antgrape::Application.routes.draw do
     get '/logout'  => 'devise/sessions#destroy',   :as => :destroy_user_session
     get "/signup"   => "devise/registrations#new",   :as => :new_user_registration
   end
+
+  match 'create-fellowship' => 'fellowships#create', :as => "create_fellowship", :via => :post
+  match 'update-fellowship' => 'fellowships#update', :as => "update_fellowship", :via => :post
+
+  match 'looking-for' => 'coworker_requests#index', :as => "looking_for"
+
+  match 'my-profile' => 'profiles#show', :as => "my_profile"
+  match 'edit-profile' => 'profiles#edit_profile', :as => "edit_profile"
+  match '/' => 'profiles#index', :as => "profiles"
+
+
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 

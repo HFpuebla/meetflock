@@ -8,17 +8,6 @@
     <div id="sign-up" class="span9 offset1">
       <div id="sign-up-inner">
         <h2>Sign-Up or Register</h2>
-        <div class="alert-message block-message error" data-alert="alert">
-          <a class="close" href="#">×</a>
-          <p><strong>Oh snap! You got an error!</strong> Change this and that and <a href="#">try again</a>.</p>
-          <ul>
-            <li>Duis mollis est non commodo luctus</li>
-            <li>Nisi erat porttitor ligula</li>
-            <li>Eget lacinia odio sem nec elit</li>
-          </ul>
-        </div>
-
-
         <%= form_for(resource,:html => {:class=> "form-stacked span3", :id => "log-in"}, :as => resource_name, :url => session_path(resource_name)) do |f| %>
           <fieldset>
             <legend>Log-in</legend>

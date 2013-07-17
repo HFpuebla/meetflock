@@ -16,7 +16,7 @@
 
     	<aside id="filters" class="span3">
     		<div id="filters-inner">
-    			<h3>Búsqueda</h3>
+    			<h3>Busqueda</h3>
     			<nav>
     				<ul>
     					<li>
@@ -24,6 +24,7 @@
     						<ul>
     							<li><a href="#">Anime</a></li>
     							<li><a href="#">Cartoons</a></li>
+    							<li><a href="#">Hentai</a></li>
     							<li><a href="#">Comics</a></li>
     						</ul>
     					</li>
