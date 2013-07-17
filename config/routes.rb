@@ -20,7 +20,7 @@ Antgrape::Application.routes.draw do
 
   match 'looking-for' => 'coworker_requests#index', :as => "looking_for"
 
-  match 'my-profile' => 'profiles#show', :as => "my_profile"
+  match 'profile/:id' => 'profiles#show', :as => "my_profile"
   match 'edit-profile' => 'profiles#edit_profile', :as => "edit_profile"
   match '/' => 'profiles#index', :as => "profiles"
 

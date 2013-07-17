@@ -65,7 +65,7 @@
 
               <% if user_signed_in? %>
                 <li>
-                  <%= link_to('Tu cuenta', my_profile_path(@user)) %>
+                  <%= link_to('Tu cuenta', my_profile_path(:id => current_user.profile.id)) %>
                 </li>
               <% else %>
                 <li>

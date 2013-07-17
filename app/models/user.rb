@@ -3,22 +3,22 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-         
+
   has_mailbox
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username
-    
+
   has_one :profile
   has_and_belongs_to_many :roles
   has_many :coworker_requests
   has_many :fellowships, :foreign_key => "inviter_id"
   has_many :coworkers, :through => :fellowships, :foreign_key => "invited_id"
   has_many :inverse_coworkers, :through => :fellowships, :foreign_key => "inviter_id"
-  
+
   # Validations
   validates :username, :uniqueness => true
-  
+
   def role?(role)
     !!self.roles.find_by_name(role.to_s)
   end
