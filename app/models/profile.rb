@@ -1,19 +1,19 @@
 class Profile < ActiveRecord::Base
 
   # Constants
-  STATUSES = {  :available => 1, 
+  STATUSES = {  :available => 1,
                 :not_available => 0}
-  
+
   # Gem Configs
   acts_as_taggable
   acts_as_taggable_on :skills
   metropoli_for :city
-  
+
   # Associations
   belongs_to :user
   belongs_to :position
-  
-  has_attached_file :avatar, 
+
+  has_attached_file :avatar,
     :styles => { :mini => '48x48>', :small => '100x100>', :product => '240x240>', :large => '600x600>' },
     :default_style => :product,
     :url => "/assets/avatars/:id/:style/:basename.:extension",
@@ -24,45 +24,45 @@ class Profile < ActiveRecord::Base
       :secret_access_key => ENV['S3_SECRET']
     },
     :bucket => ENV['S3_BUCKET']
-    
+
   # Hooks
   after_save :expire_profile_all_cache
   after_destroy :expire_profile_all_cache
-    
+
   # Validations
   validates :name, :city_name, :motto, :position,  :presence => true
   validates :status, :inclusion => { :in => STATUSES.collect { |k, v| v.to_s } }
   validates :skill_list, :length => { :minimum => 1, :maximum => 5 }
   validate :no_attachement_errors
-  
+
   # if there are errors from the plugin, then add a more meaningful message
   def no_attachement_errors
     unless avatar.errors.empty?
       # uncomment this to get rid of the less-than-useful interrim messages
-      # errors.clear 
+      # errors.clear
       errors.add :avatar, "Paperclip returned errors for file '#{avatar_file_name}' - check ImageMagick installation or image source file."
       false
     end
   end
-  
+
   def self.all_cached
     Rails.cache.fetch('Profile.all') { order('created_at DESC') }
   end
-  
+
   def expire_profile_all_cache
     Rails.cache.delete('Profile.all')
   end
-  
+
   def get_status
-   
+
     if self.status == 1
       return t
     else
     end
-    
-      
+
+
   end
-  
+
 end
 # == Schema Information
 #

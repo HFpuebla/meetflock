@@ -46,4 +46,19 @@ class ProfilesController < ApplicationController
         end
     end
   end
+
+  def step1
+    @profile = Profile.new(:user_id => (params[:id]))
+    respond_to do |format|
+      format.html
+      format.json { render json: @profile }
+    end
+  end
+  def step2
+    @profile = Profile.new(:user_id => (params[:id]))
+    respond_to do |format|
+      format.html
+      format.json { render json: @profile }
+    end
+  end
 end

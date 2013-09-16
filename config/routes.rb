@@ -22,6 +22,8 @@ Antgrape::Application.routes.draw do
 
   match 'profile/:id' => 'profiles#show', :as => "my_profile"
   match 'edit-profile' => 'profiles#edit_profile', :as => "edit_profile"
+  match 'step-1/:id' => 'profiles#step1', :as => "paso1"
+  match 'step-2/:id' => 'profiles#step2', :as => "paso1"
   match '/' => 'profiles#index', :as => "profiles"
 
 
