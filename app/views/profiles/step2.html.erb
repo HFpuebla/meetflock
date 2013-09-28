@@ -1,0 +1,79 @@
+<div class="container" role="content">
+    <div class="row">
+        <div id="step2" class="span7 offset2 details">
+            <div id="step2-inner">
+                <h2><span class="step">Paso 2.</span> Trabajo</h2>
+                <div class="form-container">
+                    <%= form_for @profile do |f| %>
+                    <form method="" action="">
+                        <fieldset>
+                            <legend>Buscando</legend>
+
+                            <div class="clearfix">
+                                <label for="name">Buscando</label>
+                                <div class="input">
+                                    <input class="span1" type="text" name="multiplier" value="1" />
+                                    <span class="times">x</span>
+                                    <select name="position" class="span3">
+                                        <option>Diseñador Web</option>
+                                    </select>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="clearfix">
+                                <label for="name">Habilidades</label>
+                                <div class="input">
+                                    <textarea class="span4"></textarea>
+                                    <span class="help-block">Ejemplo: Mi nombre es Joe Black y me gusta...</span>
+                                </div>
+                            </div>
+
+
+                            <div class="actions">
+                                <input type="submit" value="Add Position" class="add-position"> <span>or <a href="#">Cancel</a></span>
+                            </div>
+
+                        </fieldset>
+                    </form>
+
+                </div>
+                <% end %>
+
+
+
+
+
+                <div id="what-i-need">
+                    <h3>What i Need</h3>
+                    <ul class="looking-for">
+                        <li>
+                            <div class="details">
+                                <h4 class="position">Web Designer</h4>
+                                <p class="skills">Design, Photoshop, CSS, UI Design</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="details">
+                                <h4 class="position">Web Developer</h4>
+                                <p class="skills">Design, Photoshop, CSS, UI Design</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="details">
+                                <h4 class="position">Web Developer</h4>
+                                <p class="skills">Design, Photoshop, CSS, UI Design</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div> <!-- /container -->

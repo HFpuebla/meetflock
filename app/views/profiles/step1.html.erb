@@ -1,0 +1,95 @@
+
+<div id="intro">
+  <div class="container">
+  </div>
+
+</div>
+
+<div class="container" role="content">
+
+  <div class="row">
+    <div id="step1" class="span7 offset2 details">
+      <div id="step1-inner">
+        <h2><span class="step">Paso 1.</span> Platícanos de ti.</h2>
+
+
+        <div class="form-container">
+          <%= form_for @profile do |f| %>
+
+            <fieldset>
+              <legend>Información Personal</legend>
+
+              <div class="clearfix">
+                <label for="name">Nombre</label>
+                <div class="input">
+                  <%= f.text_field :name, :class => "span4" %>
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <label for="location">Localización</label>
+                <div class="input">
+                  <%= f.text_field :city_name, :class => "span4" %>
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <label for="profile">Foto de perfil</label>
+                <div class="input">
+                  <%= f.file_field :avatar, :class => "span4" %>
+                  <span class="help-block">Tamaño Máximo 100x100 pixels</span>
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <label for="motto">Motto</label>
+                <div class="input">
+                  <textarea class="span4"></textarea>
+                  <span class="help-block">Ej: Descripción sobre ti, como tu biografía de Twitter</span>
+
+                </div>
+              </div>
+            </fieldset>
+
+
+            <fieldset>
+              <legend>Información de tu trabajo</legend>
+                <%= options_for_select([['Posición de trabajo en la que trabajas', 0], ['No disponible para trabajar', 2]]) %>
+              <div class="clearfix">
+                <label for="position">Posiciones en Proyectos</label>
+                <div class="input">
+                  <select class="span4">
+                 <%= options_for_select([['Programar posiciones', 0], ['Web Developer', 2]]) %>
+                    <option>Web Designer</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <label for="skills">Habilidades</label>
+                <div class="input">
+                  <input class="span4" type="text" name="skills" value="" />
+                  <span class="help-block">Ej: CSS, UI Design, Photoshop, Javascript</span>
+                </div>
+              </div>
+
+              <div class="clearfix">
+                <label for="status">Status</label>
+                <div class="input">
+                  <select class="span4">
+                 <%= options_for_select([['Disponible para trabajar.', 0], ['Ocupado, trabajando para conquistar al mundo', 2]]) %>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="actions">
+              <%= f.submit "Guardar Cambios", :class => "btn primary" %> <span>or <a href="#">Cancel</a></span>
+            </div>
+          <% end %>
+        </div><!-- .form-container -->
+      </div><!-- #step1-inner -->
+    </div><!-- #step! -->
+
+  </div>
+
