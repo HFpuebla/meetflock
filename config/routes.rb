@@ -7,6 +7,8 @@ Antgrape::Application.routes.draw do
   metropoli_for :cities, :states, :countries
   resources :coworker_requests
   resources :profiles
+  #Adding routes facebook auth
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   # Override devise default routes for login, logout and signup
   devise_for :users do
     get '/login'   => "devise/sessions#new",       :as => :new_user_session
