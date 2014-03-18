@@ -51,6 +51,14 @@
           <ul class="nav">
             <li><a href="#about">Descubre <span>Otros perfiles</span></a></li>
           </ul>
+          <div id="user-widget">
+            <% if current_user %>
+              Welcome <%= current_user.username %> !
+              <%= link_to('Sign Out', destroy_user_session_path, :method=>'delete') %>
+            <% else %>
+              <%= link_to "Sign in with Facebook", "users/auth/facebook", id: "sign_in" %>
+            <% end %>
+          </div>
           <ul class="sub-nav">
             <ul class="nav">
               <% if user_signed_in? %>
@@ -59,17 +67,13 @@
                 </li>
               <% else %>
                 <li>
-                  <%= link_to('Login', new_user_session_path)  %>
+                  <%= link_to('Login', new_user_registration_path)  %>
                 </li>
               <% end %>
 
               <% if user_signed_in? && !current_user.profile.nil? %>
                 <li>
                   <%= link_to('Tu cuenta', my_profile_path(:id => current_user.profile.id)) %>
-                </li>
-              <% else %>
-                <li>
-                  <%= link_to('Regístrate', new_user_registration_path)  %>
                 </li>
               <% end %>
             </ul>

@@ -192,6 +192,8 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
+  require "omniauth-facebook"
+  config.omniauth :facebook, "1432521453659398", "62efcda6545e20dbb80a2a381fc259f3"
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting

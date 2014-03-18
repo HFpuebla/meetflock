@@ -10,6 +10,7 @@ gem 'rails'
 gem 'pg'
 gem 'devise'
 gem 'omniauth'
+gem 'omniauth-facebook'
 gem "has_mailbox"
 gem 'fastercsv' # Only required on Ruby 1.8 and below
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
